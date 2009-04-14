@@ -1,6 +1,6 @@
 === RevCanonical ===
 Contributors: whomwah 
-Donate Link: http://pledgie.org/campaigns
+Donate Link: http://pledgie.org/campaigns/3803 
 Tags: revcanonical, simple, post, url
 Requires at least: 2.6
 Tested up to: 2.7
