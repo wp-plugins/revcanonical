@@ -16,6 +16,8 @@ RevCanonical creates and adds support for shortened urls as per <a href="http://
 
 That’s it! You can now, not only use this url in sites like [Twitter](http://twitter.com) without having to go via a url shortening service, but [services](http://revcanonical.appspot.com/) or people that understand the rev=canonical link tag, will be able to use this shortened version over the longer canonical version. It also means that it’s persistence is down to me, and not to a 3rd party. Oh and there's [a great bookmarklet](http://simonwillison.net/2009/Apr/11/revcanonical/) that makes hunting for existing short urls really simple.
 
+You can read more about this plugin at my website http://littl.me/p136
+
 == Frequently Asked Questions ==
 
 = Does it work with earlier versions of Wordpress? =
