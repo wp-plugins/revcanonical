@@ -28,7 +28,7 @@ You can add you own shortened domain name if you own one via the settings page. 
 
 = Can I contribute to revcanonical? =
 
-Sure, the code lives at the [Revcanonical github project page](http://whomwah.github.com/revcanonical "Revcanonical via Github"). You can download or fork it there.
+Sure, the code lives at the [Revcanonical github project page](http://whomwah.com/revcanonical "Revcanonical via Github"). You can download or fork it there.
 
 == Installation ==
 
