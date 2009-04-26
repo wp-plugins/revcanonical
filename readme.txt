@@ -4,7 +4,7 @@ Donate Link: http://pledgie.org/campaigns/3803
 Tags: revcanonical, shortening, links, simple, post, url
 Requires at least: 2.6
 Tested up to: 2.7.2
-Stable tag: 1.2 
+Stable tag: 1.2.1 
 
 A Wordpress plugin that creates and adds support for shortened urls plus the shortlink auto-discovery tag
 
@@ -20,7 +20,9 @@ This tag can though be customised to suit your own preferences (at your own risk
 
 `<link rel="shortlink" href="http://my-mini.me/p12p" />` 
 
-That’s it! Oh and there's [a great bookmarklet](http://simonwillison.net/2009/Apr/11/revcanonical/) that makes hunting for existing short urls on a page really simple. You can read more about this plugin at my website http://littl.me/p136
+That’s it! You can now, not only use this url to pass around, and in sites like [Twitter](http://twitter.com) without having to go via a url shortening service, but [services](http://revcanonical.appspot.com/) or people that understand the rev=canonical link tag, will be able to use this shortened version over the longer canonical version. It also means that it’s persistence is down to you, and not to a 3rd party.
+
+Oh and there's [a great bookmarklet](http://simonwillison.net/2009/Apr/11/revcanonical/) that makes hunting for existing short urls on a page really simple. You can read more about this plugin at my website http://littl.me/p136
 
 == Advanced ==
 
