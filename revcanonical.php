@@ -3,7 +3,7 @@
 Plugin Name: RevCanonical
 Plugin URI: http://whomwah.github.com/revcanonical/ 
 Description: Creates and adds support for shortened urls plus the shortlink auto-discovery tag
-Version: 1.2.3
+Version: 1.2.4
 Author: Duncan Robertson 
 Author URI: http://whomwah.com
 */
@@ -46,11 +46,17 @@ function revcanonical_do_redirect($qv)
     return $qv;
   }
 
-  $rq = spliti('/', trim($_SERVER['REQUEST_URI'],'/'));
+  if (isset($GLOBALS["HTTP_SERVER_VARS"]["REQUEST_URI"])) {
+    $uri = $GLOBALS["HTTP_SERVER_VARS"]["REQUEST_URI"];
+  } else {
+    $uri = $GLOBALS["_SERVER"]["REQUEST_URI"];
+  }
+
+  $rq = spliti('/', trim($uri,'/'));
   $rq = $rq[count($rq)-1];
   $id = substr($rq, 1, strlen($rq));
   if ($id != '' && $pl = revcanonical_unshorten($id)) {
-    wp_redirect($pl, 301);
+	  header('Location: '.$pl, true, 301);
 	  exit;
   }
 
@@ -100,8 +106,8 @@ function revcanonical_management()
   <p><code><?php echo htmlspecialchars(revcanonical_html('')) ?></code></p>
   <p>Sites like <a href="http://flickr.com">Flickr</a>, <a href="http://dopplr.com/">Dopplr</a> and <a href="http://php.net/">php.net</a> now add this link tag to their pages. There is even <a href="http://simonwillison.net/2009/Apr/11/revcanonical/">a bookmarklet</a> that will returned the shortened url for a page if it's available. For more information visit <a href="http://revcanonical.appspot.com/">http://revcanonical.appspot.com/</a></p>
   <p>And finally... there are a couple of tags you can use in your own templates, that will return the short link for that page. You need to pass them the post ID. </p>
-  <p><code><?php echo(htmlspecialchars("<?php get_revcanonical_shorturl(\$post->ID) ?>  ===> Echo the shorturl to the screen")) ?></code></p>
-  <p><code><?php echo(htmlspecialchars("<?php \$url = revcanonical_shorturl(\$post->ID) ?>  ===> Assign the shorturl to a variable")) ?></code></p>
+  <p><code><?php echo(htmlspecialchars("<?php get_revcanonical_link(\$post->ID) ?>  ===> Echo the shorturl to the screen")) ?></code></p>
+  <p><code><?php echo(htmlspecialchars("<?php \$url = revcanonical_link(\$post->ID) ?>  ===> Assign the shorturl to a variable")) ?></code></p>
   <h2>Advanced Configuration</h2>
   <p>I suggest only changing these if you know what you're doing. If you think you made a mistake, then changing a setting to empty and re-saving will revert back to the defaults.</p>
   <h3>Custom Shortened Domain Name</h3>
