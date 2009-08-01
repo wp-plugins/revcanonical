@@ -24,6 +24,8 @@ That’s it! You can now, not only use this url to pass around, and in sites lik
 
 Oh and there's [a great bookmarklet](http://simonwillison.net/2009/Apr/11/revcanonical/) that makes hunting for existing short urls on a page really simple. You can read more about this plugin at my website http://littl.me/p136
 
+NOTE: I use the Day and name style permalinks in Wordpress. I can't be sure the plugin will work if you use other formats.
+
 What's changed? View [the CHANGELOG](http://github.com/whomwah/revcanonical/raw/master/CHANGELOG)
 
 == Advanced ==
