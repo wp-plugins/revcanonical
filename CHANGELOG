@@ -1,3 +1,8 @@
+*1.2.6* (15th December, 2009)
+
+* found ANOTHER BUG, and fixed it. date urls like /12/04/ will go to the
+  correct url now
+
 *1.2.5* (1st August, 2009)
 
 * NOTE If the plugin works for you, then DON"T BOTHER UPGRADING !!!!

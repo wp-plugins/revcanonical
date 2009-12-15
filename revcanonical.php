@@ -3,7 +3,7 @@
 Plugin Name: RevCanonical
 Plugin URI: http://whomwah.github.com/revcanonical/ 
 Description: Creates and adds support for shortened urls plus the shortlink auto-discovery tag
-Version: 1.2.5
+Version: 1.2.6
 Author: Duncan Robertson 
 Author URI: http://whomwah.com
 */
@@ -50,7 +50,13 @@ function revcanonical_do_redirect($qv)
 
   $rq = spliti('/', trim($uri,'/'));
   $rq = $rq[count($rq)-1];
+
+  if (substr($rq,0,1) != 'p' || count($rq) > 5) {
+    return $qv;
+  }
+
   $id = substr($rq, 1, strlen($rq));
+
   if ($id != '' && $pl = revcanonical_unshorten($id)) {
 	  header('Location: '.$pl, true, 301);
 	  exit;
@@ -65,7 +71,7 @@ function revcanonical_shorten($no)
   if ($url == '')
     $url = get_bloginfo('url');
   if (!$no)
-    return "$url/xx";
+    return false;
   $id = base_convert($no, 10, 36);
   return $url.'/p'.base_convert($no, 10, 36);
 }

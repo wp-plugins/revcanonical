@@ -3,8 +3,8 @@ Contributors: whomwah
 Donate Link: http://pledgie.org/campaigns/3803 
 Tags: revcanonical, shortening, links, simple, post, url
 Requires at least: 2.6
-Tested up to: 2.8
-Stable tag: 1.2.5 
+Tested up to: 2.8.6
+Stable tag: 1.2.6 
 
 A Wordpress plugin that creates and adds support for shortened urls plus the shortlink auto-discovery tag
 
