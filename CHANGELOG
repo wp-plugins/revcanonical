@@ -1,0 +1,48 @@
+*1.2.6* (15th December, 2009)
+
+* found ANOTHER BUG, and fixed it. date urls like /12/04/ will go to the
+  correct url now
+
+*1.2.5* (1st August, 2009)
+
+* NOTE If the plugin works for you, then DON"T BOTHER UPGRADING !!!!
+* reverted redirect code. Still not fixed but judging by comments should help more people than it breaks 
+
+*1.2.4* (27th June, 2009)
+
+* added for redirect fixes although it may not fix everyone's problems
+* merge docs typo fix from Trey Piepmeier <trey@treypiepmeier.com> 
+
+*1.2.3* (16th June, 2009)
+
+* another bug fix on the url redirect 
+
+*1.2.2* (30th May, 2009)
+
+* add exit call after 301 redirect.
+  Thanks to http://github.com/tswicegood  
+
+*1.2.1* (26th April, 2009)
+
+* bug for domains like:
+  www.foo.com/blog/...
+
+*1.2.0* (21st April, 2009)
+
+* updated all the text to hopefully make more sense
+* add extra configuration so you can customise you link
+  attributes to which side of the fence you sit
+* add wordpress tag revcanonical_link($id)  
+* add wordpress tag get_revcanonical_link($id)  
+
+*1.1.1* (14th April, 2009)
+
+* tidy up on the train. Lauched plugin a bit too fast
+
+*1.1.0* (14th April, 2009)
+
+* added type="text/html" as attrib and removed rel
+
+*1.0.0* (14th April, 2009)
+
+* initial release [Duncan Robertson]
